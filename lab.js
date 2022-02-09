@@ -7,19 +7,31 @@
 */
 
 //CODE HERE
-let lovesCode = true;
+let lovesCode = false;
 
-// First way
+// Answer:
+if(lovesCode === true) console.log("I love to code!");
+else if(lovesCode === false) console.log("Coding has its challenges.");
+else console.log("lovesCode did not meet the previous criteria");
+
+// Altnerate way #1
 if(lovesCode) console.log("I love to code!");
 else if(!lovesCode) console.log("Coding has its challenges.");
+else console.log("lovesCode did not meet the previous criteria");
 
-// Alternate way
+// Alternate way #2
 if(lovesCode === true) console.log("I love to code!");
-else if(!lovesCode !== true) console.log("Coding has its challenges.");
+else if(lovesCode !== true) console.log("Coding has its challenges.");
+else console.log("lovesCode did not meet the previous criteria");
 
-// Another alternative way
+// Alternate way #3
 if(lovesCode !== false) console.log("I love to code!");
-else if(!lovesCode === false) console.log("Coding has its challenges.");
+else if(lovesCode === false) console.log("Coding has its challenges.");
+else console.log("lovesCode did not meet the previous criteria");
+
+// Alternate way #4 (I don't like this way because it doesn't check if the value is false)
+if (lovesCode) console.log("I love to code!");
+else console.log("Coding has its challenges.");
 
 // For problems 2-3 use the following lines of code:
 var amysAge = 29
@@ -137,27 +149,64 @@ let passingScore = 7
 ////////// PROBLEM 8 //////////
 
 /*
-  Create a while-loop that logs "Your score is not high enough" while the score variable above is below passingScore. In each iteration of the loop, increase the score by one. If your code is successful, you will see your logged statement 7 times.
+  Create a while-loop that logs "Your score is not high enough" while the score variable above is below passingScore. 
+  In each iteration of the loop, increase the score by one. 
+  If your code is successful, you will see your logged statement 7 times.
 */
 
 //CODE HERE
+while(score < passingScore) {
+  console.log("Your score is not high enough.");
+  score++;
+}
 
 ////////// INTERMEDIATE PROBLEMS //////////
 
 ////////// PROBLEM 9 //////////
 /*
   Create a variable called 'changeMyMind' and set it equal to true. 
-  Check to see if changeMyMind is set to true or false, if it is true, change the status to false, if it is false, change the status to true.
-
+  Check to see if changeMyMind is set to true or false, 
+  if it is true, change the status to false, 
+  if it is false, change the status to true.
 */
 
 //CODE HERE
+
+let changeMyMind = false;
+
+// Answer #1
+if(changeMyMind) {
+  changeMyMind = false;
+  console.log(`Changed my mind to ${changeMyMind}`);
+}
+else if(!changeMyMind) {
+  changeMyMind = true;
+  console.log(`Changed my mind to ${changeMyMind}`);
+}
+
+changeMyMind = false; //Used to set variable back to true for alternative way. You can comment this out to see the alternatve answer reverse the variable.
+
+// Alternative Answer
+if(changeMyMind) {
+  changeMyMind = !changeMyMind;
+  console.log(`Changed my mind to ${changeMyMind}`);
+}
+else if(!changeMyMind) {
+  changeMyMind = !changeMyMind;
+  console.log(`Changed my mind to ${changeMyMind}`);
+}
+
 
 ////////// PROBLEM 10 //////////
 // Try to change the value of changeMyMind (irrespective of whether it is true or false) and then console.log it's new status. It should log true. Hint: use the not operator.
 
 //CODE HERE
 
+// Answer #1
+let origChangeMyMind = changeMyMind;
+
+changeMyMind = !changeMyMind
+console.log(`Changed my mind to ${changeMyMind} from ${origChangeMyMind}`);
 
 
 ////////// ADVANCED PROBLEMS //////////
@@ -165,6 +214,14 @@ let passingScore = 7
 ////////// PROBLEM 11 //////////
 
 let z = 5
-// Create a while loop that continues to run while z is greater than 0. Within the while loop, log a countdown from the value of z to 1. Once you have logged the countdown, make sure you decrement z by 1. If your code is running properly, you should see: 5,4,3,2,1,4,3,2,1,3,2,1,2,1,1.
+// Create a while loop that continues to run while z is greater than 0. 
+//Within the while loop, log a countdown from the value of z to 1. 
+//Once you have logged the countdown, make sure you decrement z by 1. 
+//If your code is running properly, you should see: 5,4,3,2,1,4,3,2,1,3,2,1,2,1,1.
 
 //CODE HERE
+
+while(z > 0) {
+  for(let i = z; i > 0; i--) console.log(i);
+  z--
+}
