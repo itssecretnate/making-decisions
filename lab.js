@@ -87,8 +87,8 @@ if(rain) {
 // If it's not raining
 if(!rain) {
   if(temperature <= 32) console.log("You should wear a winter coat today. It looks like it's below freezing!");
-  if(temperature > 32 && temperature < 70) console.log("You should wear a long sleeve shirt. It's chilly!");
-  if(temperature >= 70) console.log("You should wear a t-shirt today. It appears to be warm!");
+  else if(temperature > 32 && temperature < 70) console.log("You should wear a long sleeve shirt. It's chilly!");
+  else if(temperature >= 70) console.log("You should wear a t-shirt today. It appears to be warm!");
 }
 
 else if(temperature <= 60 && temperature > 32) console.log("One should wear a jacket and carry an umbrella.");
@@ -116,12 +116,12 @@ for(let i = 0; i < 10; i++) {
 
 // One way of handling it.
 for(let i = 1; i <= 10; i++) {
-  console.log(`Interation: ${i}`);
+  console.log(`Iteration: ${i}`);
 }
 
 // Altnerative way.
 for(let i = 0; i < 10; i++) {
-  console.log(`Alternative Interation: ${i+1}`);
+  console.log(`Alternative Iteration: ${i+1}`);
 }
 
 ////////// PROBLEM 7 //////////
@@ -134,12 +134,12 @@ for(let i = 0; i < 10; i++) {
 
 // One way of handling it.
 for(let i = 10; i > 0; i--) {
-  console.log(`Reverse iteration: ${i}`);
+  console.log(`Reverse Iteration: ${i}`);
 }
 
 // Altnerative way.
 for(let i = 9; i >= 0; i--) {
-  console.log(`Reverse Alternative Interation: ${i+1}`);
+  console.log(`Reverse Alternative Iteration: ${i+1}`);
 }
 
 let score = 0
@@ -203,7 +203,7 @@ else if(!changeMyMind) {
 //CODE HERE
 
 // Answer #1
-let origChangeMyMind = changeMyMind;
+let origChangeMyMind = changeMyMind; //Track what the original variable is before changing my mind.
 
 changeMyMind = !changeMyMind
 console.log(`Changed my mind to ${changeMyMind} from ${origChangeMyMind}`);
