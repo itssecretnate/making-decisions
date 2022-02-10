@@ -82,16 +82,16 @@ let rain = true
 //CODE HERE
 
 // If it is raining
-if(rain === true) {
+if(rain) {
   if(temperature >= 80) console.log("One should wear a t-shirt and take an umbrella.")
   else if(temperature > 60 && temperature < 80) console.log("One should wear a rain-jacket.");
 }
 
 // If it's not raining (My own clothing suggetions)
-if(rain === false) {
+if(!rain) {
   if(temperature <= 32) console.log("You should wear a winter coat today. It looks like it's below freezing!");
-  else if(temperature > 32 && temperature < 70) console.log("You should wear a long sleeve shirt. It's chilly!");
   else if(temperature >= 70) console.log("You should wear a t-shirt today. It appears to be warm!");
+  else if(temperature > 32) console.log("You should wear a long sleeve shirt. It's chilly!");
 }
 
 // We don't know if it's raining.
